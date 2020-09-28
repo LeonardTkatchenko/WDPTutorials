@@ -30,6 +30,12 @@ namespace WDPTutorials.Controllers
 
         public IActionResult HTML5()
         {
+            var assignment1Mark = 20;
+            var assignment2Mark = 15;
+            var examMark = 55;
+            var totalMark = assignment1Mark + assignment2Mark + examMark;
+            ViewBag.MyTotalMark = totalMark;
+
             return View();
         }
 

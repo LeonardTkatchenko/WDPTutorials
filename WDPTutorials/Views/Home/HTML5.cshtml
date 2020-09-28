@@ -3,6 +3,66 @@
 *@
 @{
     ViewData["Title"] = "HTML5";
+    Layout = null;
 
 }
 <h1>@ViewData["Title"]</h1>
+<h3>Example 1</h3>
+<header>
+    <h1>Web Design and Programming</h1>
+    <nav>
+        <a href="https://www.canberra.edu.au/">University of Canberra</a>
+        <a href="https://www.google.com.au/">Google search</a>
+        <a href="https://www.bing.com/">Bing search</a>
+    </nav>
+</header>
+
+<h3>Example 2</h3>
+<article>
+    <h1>HTML5 elements</h1>
+    <section>
+        <h3>Figure</h3>
+        <figure>
+            <img width="100" src=" https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png" />
+            <figcaption>Fig 1: HTML5 logo</figcaption>
+        </figure>
+    </section>
+    <section>
+        <h3>Progress</h3>
+        <ul>
+            <li>
+                Indeterminate: <span>0</span>
+                <progress max="20"></progress>
+                <span>100</span>
+            </li>
+            <li>
+                Determinate:&nbsp;&nbsp; <span>0</span>
+                <progress value="20" max="100"></progress>
+                <span>100</span>
+            </li>
+        </ul>
+    </section>
+    <section>
+        <h3>Mark</h3>
+        <p>We are learning <mark>HTML5</mark> in this tutorial.</p>
+    </section>
+</article>
+
+
+<h3>Example 3</h3>
+<picture>
+    <source srcset="~/images/pepper.jpg" media="(max-width: 800px)" />
+    <source srcset="~/images/wiggy.jpg" media="(min-width: 1000px)" />
+    <img src="~/images/wiggypepper.jpg" />
+</picture>
+
+<h3>Example 4</h3>
+@{
+    var assignment1Mark = 20;
+    var assignment2Mark = 15;
+    var examMark = 55;
+    var totalMark = assignment1Mark + assignment2Mark + examMark;
+}
+<h4>My total mark: @totalMark</h4>
+<h4>My total mark from ViewBag: @ViewBag.MyTotalMark</h4>
+<h4>My total mark from ViewData: @ViewData["MyTotalMark"]</h4>
