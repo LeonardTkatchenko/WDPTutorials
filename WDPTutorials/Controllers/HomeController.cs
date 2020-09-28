@@ -38,6 +38,10 @@ namespace WDPTutorials.Controllers
 
             return View();
         }
+        public IActionResult CSS3()
+        {
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
