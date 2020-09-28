@@ -72,6 +72,19 @@ body {
 
 /* Leonard's CSS
 -------------------------------------------------- */
+.bg {
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.centre {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    height: 400px;
+    background-color: lightgrey;
+}
 
 figure {
     height: 500px;
@@ -109,5 +122,23 @@ img {
     font-size: 65px;
     text-align: center;
     font-weight: 400;
+}
+
+@media (min-width: 768px) {
+    .q1 {
+        padding: 10%;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .q1 {
+        padding: 15%;
+    }
+}
+
+@media (max-width: 576px) {
+    .q1 {
+        padding: 25%;
+    }
 }
 
